@@ -324,8 +324,9 @@ pre {
 }
 
 button {
-  background-color: transparent;
+  background-color: red; /*ปุ่ม delete กับ ปุ่ม Add task ด้านใน */
   background-image: none;
+  
 }
 
 fieldset {
@@ -481,7 +482,7 @@ h6 {
  */
 
 a {
-  color: inherit;
+  color: green; /* change text Add new task and Edit*/
   text-decoration: inherit;
 }
 
@@ -500,7 +501,7 @@ select,
 textarea {
   padding: 0;
   line-height: inherit;
-  color: inherit;
+  color: blue; /* change text delete and  Add task ja*/
 }
 
 /**
@@ -1575,7 +1576,25 @@ select {
 }
 .py-12 {
 	padding-top: 3rem;
+	padding-bottom: 50rem;
+	/* color: rgb(206, 6, 6); */
+	padding-left: 40rem;
+	
+}
+.py-55 {
+	background-image: url("Cosy.jpeg");
+}
+.py-56 {
+	padding-top: 3rem;
 	padding-bottom: 3rem;
+	color: rgb(206, 6, 6);
+}
+
+.py-89 {
+	padding-top: 3rem;
+	padding-bottom: 50rem;
+	background-image: url("tdlgame.jpg");
+	color: rgb(111, 0, 255);
 }
 .py-10 {
 	padding-top: 2.5rem;
