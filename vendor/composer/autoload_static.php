@@ -136,6 +136,7 @@ class ComposerStaticInitae6eebb4df4fd3fb1dd84e522eb28fed
         ),
         'J' => 
         array (
+            'Jorenvh\\Share\\' => 14,
             'Jenssegers\\Agent\\' => 17,
             'Jaybizzle\\CrawlerDetect\\' => 24,
         ),
@@ -439,6 +440,10 @@ class ComposerStaticInitae6eebb4df4fd3fb1dd84e522eb28fed
         'Laravel\\Fortify\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/fortify/src',
+        ),
+        'Jorenvh\\Share\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src',
         ),
         'Jenssegers\\Agent\\' => 
         array (
@@ -2791,6 +2796,9 @@ class ComposerStaticInitae6eebb4df4fd3fb1dd84e522eb28fed
         'Jenssegers\\Agent\\Agent' => __DIR__ . '/..' . '/jenssegers/agent/src/Agent.php',
         'Jenssegers\\Agent\\AgentServiceProvider' => __DIR__ . '/..' . '/jenssegers/agent/src/AgentServiceProvider.php',
         'Jenssegers\\Agent\\Facades\\Agent' => __DIR__ . '/..' . '/jenssegers/agent/src/Facades/Agent.php',
+        'Jorenvh\\Share\\Providers\\ShareServiceProvider' => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src/Providers/ShareServiceProvider.php',
+        'Jorenvh\\Share\\Share' => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src/Share.php',
+        'Jorenvh\\Share\\ShareFacade' => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src/ShareFacade.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Laravel\\Fortify\\Actions\\AttemptToAuthenticate' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/AttemptToAuthenticate.php',
         'Laravel\\Fortify\\Actions\\CompletePasswordReset' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/CompletePasswordReset.php',
@@ -3352,6 +3360,7 @@ class ComposerStaticInitae6eebb4df4fd3fb1dd84e522eb28fed
         'Livewire\\Exceptions\\ComponentNotFoundException' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/ComponentNotFoundException.php',
         'Livewire\\Exceptions\\CorruptComponentPayloadException' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/CorruptComponentPayloadException.php',
         'Livewire\\Exceptions\\DirectlyCallingLifecycleHooksNotAllowedException' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/DirectlyCallingLifecycleHooksNotAllowedException.php',
+        'Livewire\\Exceptions\\LivewirePageExpiredBecauseNewDeploymentHasSignificantEnoughChanges' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/LivewirePageExpiredBecauseNewDeploymentHasSignificantEnoughChanges.php',
         'Livewire\\Exceptions\\MethodNotFoundException' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/MethodNotFoundException.php',
         'Livewire\\Exceptions\\MissingFileUploadsTraitException' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/MissingFileUploadsTraitException.php',
         'Livewire\\Exceptions\\MissingRulesException' => __DIR__ . '/..' . '/livewire/livewire/src/Exceptions/MissingRulesException.php',
@@ -3374,6 +3383,7 @@ class ComposerStaticInitae6eebb4df4fd3fb1dd84e522eb28fed
         'Livewire\\Features\\SupportFileDownloads' => __DIR__ . '/..' . '/livewire/livewire/src/Features/SupportFileDownloads.php',
         'Livewire\\Features\\SupportFileUploads' => __DIR__ . '/..' . '/livewire/livewire/src/Features/SupportFileUploads.php',
         'Livewire\\Features\\SupportLocales' => __DIR__ . '/..' . '/livewire/livewire/src/Features/SupportLocales.php',
+        'Livewire\\Features\\SupportPostDeploymentInvalidation' => __DIR__ . '/..' . '/livewire/livewire/src/Features/SupportPostDeploymentInvalidation.php',
         'Livewire\\Features\\SupportRedirects' => __DIR__ . '/..' . '/livewire/livewire/src/Features/SupportRedirects.php',
         'Livewire\\Features\\SupportRootElementTracking' => __DIR__ . '/..' . '/livewire/livewire/src/Features/SupportRootElementTracking.php',
         'Livewire\\Features\\SupportStacks' => __DIR__ . '/..' . '/livewire/livewire/src/Features/SupportStacks.php',

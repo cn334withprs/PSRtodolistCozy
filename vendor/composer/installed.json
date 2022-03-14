@@ -1708,6 +1708,72 @@
             "install-path": "../jenssegers/agent"
         },
         {
+            "name": "jorenvanhocht/laravel-share",
+            "version": "4.2.0",
+            "version_normalized": "4.2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jorenvh/laravel-share.git",
+                "reference": "86af334068038a840567ed62f2082fe3ac981476"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jorenvh/laravel-share/zipball/86af334068038a840567ed62f2082fe3ac981476",
+                "reference": "86af334068038a840567ed62f2082fe3ac981476",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.13|^7.0",
+                "phpunit/phpunit": "^9.3"
+            },
+            "time": "2022-02-11T17:20:09+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Jorenvh\\Share\\Providers\\ShareServiceProvider"
+                    ],
+                    "aliases": {
+                        "Share": "Jorenvh\\Share\\ShareFacade"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Jorenvh\\Share\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joren Van Hocht",
+                    "email": "joren@codeswitch.be",
+                    "homepage": "https://codeswitch.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Optional package for Laravel to generate social share links.",
+            "homepage": "https://github.com/jorenvh/laravel-share",
+            "keywords": [
+                "laravel",
+                "share",
+                "social links",
+                "social share links"
+            ],
+            "support": {
+                "issues": "https://github.com/jorenvh/laravel-share/issues",
+                "source": "https://github.com/jorenvh/laravel-share/tree/4.2.0"
+            },
+            "install-path": "../jorenvanhocht/laravel-share"
+        },
+        {
             "name": "laravel/fortify",
             "version": "v1.8.3",
             "version_normalized": "1.8.3.0",
@@ -1950,17 +2016,17 @@
         },
         {
             "name": "laravel/jetstream",
-            "version": "v2.4.4",
-            "version_normalized": "2.4.4.0",
+            "version": "v2.5.1",
+            "version_normalized": "2.5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/jetstream.git",
-                "reference": "24d90e998a97636871d1d0f6a2f32cc8f954666d"
+                "reference": "190441d4a3553687f09fe33a74bfe203e6cae2c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/jetstream/zipball/24d90e998a97636871d1d0f6a2f32cc8f954666d",
-                "reference": "24d90e998a97636871d1d0f6a2f32cc8f954666d",
+                "url": "https://api.github.com/repos/laravel/jetstream/zipball/190441d4a3553687f09fe33a74bfe203e6cae2c2",
+                "reference": "190441d4a3553687f09fe33a74bfe203e6cae2c2",
                 "shasum": ""
             },
             "require": {
@@ -1977,7 +2043,7 @@
                 "orchestra/testbench": "^6.0",
                 "phpunit/phpunit": "^9.3"
             },
-            "time": "2021-11-02T16:27:07+00:00",
+            "time": "2021-12-30T20:37:45+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2637,17 +2703,17 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v2.7.2",
-            "version_normalized": "2.7.2.0",
+            "version": "v2.9.0",
+            "version_normalized": "2.9.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "991e5bd8a48e450d23cd55336964f916e92a6464"
+                "reference": "e117c78f9a4b19edb294b5b576138fd1f896925a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/991e5bd8a48e450d23cd55336964f916e92a6464",
-                "reference": "991e5bd8a48e450d23cd55336964f916e92a6464",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/e117c78f9a4b19edb294b5b576138fd1f896925a",
+                "reference": "e117c78f9a4b19edb294b5b576138fd1f896925a",
                 "shasum": ""
             },
             "require": {
@@ -2666,7 +2732,7 @@
                 "phpunit/phpunit": "^8.4|^9.0",
                 "psy/psysh": "@stable"
             },
-            "time": "2021-10-20T02:27:35+00:00",
+            "time": "2022-01-13T20:07:05+00:00",
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2700,11 +2766,11 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v2.7.2"
+                "source": "https://github.com/livewire/livewire/tree/v2.9.0"
             },
             "funding": [
                 {
-                    "url": "https://github.com/calebporzio",
+                    "url": "https://github.com/livewire",
                     "type": "github"
                 }
             ],

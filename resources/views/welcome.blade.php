@@ -80,7 +80,6 @@
                 transform: translateY(4px);
             }
 
-            
 
             .buttonRe {
                 display: inline-block;
@@ -95,7 +94,6 @@
                 border: none;
                 border-radius: 15px;
                 box-shadow: 0 9px #999;
-                
                 }
 
                 .buttonRe:hover {background-color: #249f9c}
