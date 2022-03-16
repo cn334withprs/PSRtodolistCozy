@@ -2,13 +2,13 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Models\User;
 
-
 class ExampleTest extends TestCase
 {
+    
     public function testBasicTest()
 {
     $this->assertTrue(true);
