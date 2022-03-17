@@ -18,13 +18,14 @@ public function testUserCreation()
 {
     
     $user = new User([
-        'name' => "T User",
-        'email' => "test@mail.com",
+        'name' => "Psrtodolist",
+        'email' => "psr@mail.com",
         'password' => bcrypt("testpassword")
 
     ]);   
 
-    $this->assertEquals('T User', $user->name);
+    $this->assertEquals('Psrtodolist', $user->name);
+    $this->assertEquals('psr@mail.com', $user->email);
     }
 }
 
