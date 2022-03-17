@@ -17,27 +17,16 @@ class TasksController extends Controller
     	return view('add');
     }
 
-    
-
-    public function createUser(Request $request)
+    public function create(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|string|email|unique:users',
-            'password' => 'required|string|confirmed'
-        ]);        
-        
-        $user = new User([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password)
-        ]);        
-        
-        $user->save();        
-        
-        return response()->json([
-            'message' => 'Successfully created user!'
-        ], 201);
+        $this->validate($request, [
+            'description' => 'required'
+        ]);
+    	$task = new Task();
+    	$task->description = $request->description;
+    	$task->user_id = auth()->user()->id;
+    	$task->save();
+    	return redirect('/dashboard'); 
     }
 
     public function edit(Task $task)
