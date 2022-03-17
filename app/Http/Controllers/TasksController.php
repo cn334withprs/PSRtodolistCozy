@@ -17,17 +17,7 @@ class TasksController extends Controller
     	return view('add');
     }
 
-    public function create(Request $request)
-    {
-        $this->validate($request, [
-            'description' => 'required'
-        ]);
-    	$task = new Task();
-    	$task->description = $request->description;
-    	$task->user_id = auth()->user()->id;
-    	$task->save();
-    	return redirect('/dashboard'); 
-    }
+    
 
     public function createUser(Request $request)
     {
