@@ -43,18 +43,8 @@ jobs:
       - run:
           name: "Generate App key"
           command: php artisan key:generate
-
-      - run:
-	      name: "Create database and run migration"
-	      command: |
-	        touch database/database.sqlite
-	        php artisan migrate --env
-
-	    - run:
-	      name: "Run Http Tests"
-	      command: ./vendor/bin/phpunit tests/Feature
-
           
+
       # run tests with phpunit
       - run:
           name: "Run Unit Tests"
