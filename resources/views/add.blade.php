@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text font-bold py-30 px-16 rounded">Add Task here</button>
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text font-bold py-30 px-16 rounded">Add Task Here</button>
                 </div>
                 {{ csrf_field() }}
             </form>
