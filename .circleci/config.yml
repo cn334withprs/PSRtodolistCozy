@@ -2,6 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-php/ for more details
 #
+
 version: 2
 jobs:
   build:
@@ -42,12 +43,24 @@ jobs:
 
       - run:
           name: "Generate App key"
-          command: php artisan key:generate
-          
+          command: php artisan key:generate  
 
+      - run:
+          name: "Create Database and Run Migrate"
+          command:
+            touch database/database.sqlite
+            php artisan migrate --env=testing
+          
+          
       # run tests with phpunit
       - run:
           name: "Run Unit Tests"
           command: ./vendor/bin/phpunit tests/Unit
+
+#workflows:
+#  tasklist-test-workflow:
+#    jobs:
+#      - unit-test
+#      - feature-test
 
 
