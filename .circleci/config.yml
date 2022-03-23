@@ -2,6 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-php/ for more details
 #
+
 version: 2
 jobs:
   build:
@@ -47,10 +48,21 @@ jobs:
           paths:
             - ./vendor
 
+<<<<<<< HEAD
+=======
+      - run:
+          name: "Generate App key"
+          command: php artisan key:generate  
+>>>>>>> 55e6b63489bc72b765ca26cc4bbaafed47d8aba9
 
+      
+          
+          
       # run tests with phpunit
       - run:
           name: "Run Unit Tests"
           command: ./vendor/bin/phpunit tests/Unit
+
+
 
 
