@@ -19,9 +19,16 @@ jobs:
             sudo docker-php-ext-install zip
 
       - run:
-          name: "Create Environment file"
+          name: "Create Environment file and generate app key"
           command: |
             mv .env.testing .env
+            php artisan key:generate
+      
+      -run:
+          name: "Crete database and run migration"
+          command: |
+          touch database/database.sqlite
+          php artisan migrate --env=testing
 
       # Download and cache dependencies
       - restore_cache:
@@ -40,10 +47,6 @@ jobs:
           paths:
             - ./vendor
 
-      - run:
-          name: "Generate App key"
-          command: php artisan key:generate
-          
 
       # run tests with phpunit
       - run:
