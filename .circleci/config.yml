@@ -25,7 +25,12 @@ jobs:
             mv .env.testing .env
             php artisan key:generate
       
-      
+      - run:
+          name: "Create database and run migration"
+          command: |
+          touch database/test.sqlite
+          php artisan migrate --env=testing
+
       # Download and cache dependencies
       - restore_cache:
           keys:
