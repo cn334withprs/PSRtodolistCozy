@@ -24,7 +24,7 @@ public function testUserCreation()
 
     ]);   
 
-    $this->assertEquals('Psrtodolist', $usersa->name);
+    $this->assertEquals('Psrtodolist', $user->name);
     $this->assertEquals('psr@mail.com', $user->email);
     }
 }
