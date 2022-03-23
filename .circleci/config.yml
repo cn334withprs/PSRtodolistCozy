@@ -25,7 +25,7 @@ jobs:
             mv .env.testing .env
             php artisan key:generate
       
-      -run:
+      - run:
           name: "Crete database and run migration"
           command: |
           touch database/database.sqlite
@@ -46,17 +46,7 @@ jobs:
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
-            - ./vendor
-
-<<<<<<< HEAD
-=======
-      - run:
-          name: "Generate App key"
-          command: php artisan key:generate  
->>>>>>> 55e6b63489bc72b765ca26cc4bbaafed47d8aba9
-
-      
-          
+            - ./vendor     
           
       # run tests with phpunit
       - run:
