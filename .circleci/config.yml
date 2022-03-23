@@ -45,11 +45,7 @@ jobs:
           name: "Generate App key"
           command: php artisan key:generate  
 
-      - run:
-          name: "Create Database and Run Migrate"
-          command:
-            touch database/database.sqlite
-            php artisan migrate --env=testing
+      
           
           
       # run tests with phpunit
@@ -57,10 +53,6 @@ jobs:
           name: "Run Unit Tests"
           command: ./vendor/bin/phpunit tests/Unit
 
-#workflows:
-#  tasklist-test-workflow:
-#    jobs:
-#      - unit-test
-#      - feature-test
+
 
 
