@@ -43,12 +43,17 @@ jobs:
       - run:
           name: "Generate App key"
           command: php artisan key:generate
-          
-      - run:
-          name: "Create database and run migration"
-	        command: |
-	          touch database/database.sqlite
-	          php artisan migrate --env=testing
+
+     # - run:
+     #     name: "Create database and run migration"
+	   #     command: |
+	   #       touch database/database.sqlite
+	   #       php artisan migrate --env=testing
+
+     - run:
+          name: "Run DB Seeder"
+          command: |
+            php artisan db:seed --class=UserSeeder
 
       # run tests with phpunit
       - run:
