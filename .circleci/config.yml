@@ -19,18 +19,6 @@ jobs:
             sudo apt update
             sudo docker-php-ext-install zip
 
-      - run:
-          name: "Create Environment file and generate app key"
-          command: |
-            mv .env.testing .env
-            php artisan key:generate
-      
-      - run:
-          name: "Create database and run migration"
-          command: |
-          touch database/test.sqlite
-  
-
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -48,10 +36,12 @@ jobs:
           paths:
             - ./vendor
 
-      - run:
-          name: "Generate App key"
-          command: php artisan key:generate  
-
+       - run:
+          name: "Create Environment file and generate app key"
+          command: |
+            mv .env.testing .env
+            php artisan key:generate
+    
       - run:
 	      name: "Create database and run migration"
 	      command: |
