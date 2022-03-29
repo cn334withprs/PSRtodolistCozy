@@ -29,7 +29,7 @@ jobs:
           name: "Create database and run migration"
           command: |
           touch database/test.sqlite
-          php artisan migrate --env=testing
+  
 
       # Download and cache dependencies
       - restore_cache:
@@ -46,8 +46,24 @@ jobs:
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
-            - ./vendor     
-          
+            - ./vendor
+
+      - run:
+          name: "Generate App key"
+          command: php artisan key:generate  
+
+      - run:
+	      name: "Create database and run migration"
+	      command: |
+	        touch database/database.sqlite
+	        php artisan migrate --env=testing
+
+      - run:
+	      name: "Run DB Seeder"
+	      command: |
+	        php artisan db:seed --class=UserSeeder
+
+              
       # run tests with phpunit
       - run:
           name: "Run Unit Tests"
