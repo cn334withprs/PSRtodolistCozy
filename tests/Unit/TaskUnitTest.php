@@ -11,14 +11,34 @@ class TaskUnitTest extends TestCase
 
     public function testTaskCreation()
     {
-        
-        $task = new Task();
-        $task->description = "test PSR Task";
-        $task->user_id = 1;
-
-        $this->assertEquals('test PSR Task', $task->description);
 
     }
+
+    //Test Schema that description is correct
+    public function test_schema_description()
+    {
+
+    }
+
+    //Test Schema that User id is correct
+    public function test_schema_userID()
+    {
+
+    }
+
+    //Test Schema รองรับภาษาไทย
+
+
+
+
+    //Test Schema รองรับคำที่ยาวมากได้ไหม
+
+    //Test Schema null ได้ไหม
+
+
+
+
+
 }
 
 
