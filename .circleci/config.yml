@@ -54,9 +54,14 @@ jobs:
 # name: "Run DB Seeder"
 # command: |
 # php artisan db:seed --class=UserSeeder
+  
+     - run:
+         name: "Create DB and run migrate"
+         command: |
+           touch database/database.sqlite
+           php artisan migrate --env=testing
+
      
-
-
       # run tests with phpunit
       - run:
           name: "Run Unit Tests"
