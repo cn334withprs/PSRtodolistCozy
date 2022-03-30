@@ -28,9 +28,13 @@ jobs:
       - run:
           name: "Create database and run migration"
           command: |
-          touch database/test.sqlite
+          touch database/database.sqlite
           php artisan migrate --env=testing
 
+      - run:
+          name: "Run database seeder"
+          command: |
+          php artisan db:seed --class=TaskTableSeeder
       # Download and cache dependencies
       - restore_cache:
           keys:
