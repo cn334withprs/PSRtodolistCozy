@@ -1,6 +1,7 @@
 <?php
 
 namespace Tests\Unit;
+<<<<<<< HEAD
 use App\Models\Task;
 
 class TaskUnitTest extends TestCase{
@@ -66,3 +67,46 @@ class TaskUnitTest extends TestCase{
     }
 
 }
+=======
+
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Models\Task;
+
+class TaskUnitTest extends TestCase
+{ 
+
+    public function testTaskCreation()
+    {
+
+    }
+
+    //Test Schema that description is correct
+    public function test_schema_description()
+    {
+
+    }
+
+    //Test Schema that User id is correct
+    public function test_schema_userID()
+    {
+
+    }
+
+    //Test Schema รองรับภาษาไทย
+
+
+
+
+    //Test Schema รองรับคำที่ยาวมากได้ไหม
+
+    //Test Schema null ได้ไหม
+
+
+
+
+
+}
+
+
+>>>>>>> e5207cecf85cfa6f9bebd868367436d7208e2177
