@@ -51,7 +51,7 @@ jobs:
       - run:
           name: "Run database seeder"
           command: |
-          php artisan db:seed --class=UserSeeder
+          php artisan db:seed --class=UserSeeder:
       # Download and cache dependencies
       
 
