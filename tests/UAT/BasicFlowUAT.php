@@ -4,19 +4,33 @@ class BasicFlowUAT {
     //add task
     public function test_add_task_todolist()
     {
-        $this->assertTrue(true);
+        $task1 = new Task([
+            'addTask' => "Hello world",
+
+        ]);
+
+        $this->assertEquals('Hello world', $user->addTask);
     }
 
     //edited task
     public function test_edit_task_todolist()
     {
-        $this->assertTrue(true);
+        $task1 = new Task([
+            'text' => 'ABCDEabcd',
+            'condition' => 'ABCDEabcd'
+        ]);
+        $this->assertEquals('ABCDEabcd',$task1->text);
     }
 
     //deleted task
     public function test_delete_task_todolist()
     {
-        $this->assertTrue(true);
+        $task1 = new Task([
+            'text' => 'I want to sleep',
+            'condition' => 'I want to sleep'
+        ]);
+         $this->assertEquals('I want to sleep',$task1->text);
+         $this->assertTrue(true);
     }
 
     //test register
@@ -36,7 +50,13 @@ class BasicFlowUAT {
     //test login func
     public function test_login_func()
     {
-        $this->assertTrue(true);
+        $user = new User([
+            'email' => "psr@mail.com",
+            'password' => bcrypt("testpassword")
+
+        ]);
+
+        $this->assertNotEquals('psr@mail.com', $user->email);
     }
 
 }
