@@ -43,7 +43,7 @@ jobs:
       - run:
           name: "Generate App key"
           command: php artisan key:generate
-  
+
       - run:
           name: "Create DB and run migrate"
           command: |
@@ -55,10 +55,8 @@ jobs:
           command: |
             php artisan db:seed --class=UserSeeder
 
-     
+
       # run tests with phpunit
       - run:
           name: "Run Unit Tests"
           command: ./vendor/bin/phpunit tests/Unit
-
-
