@@ -17,7 +17,8 @@ jobs:
           command: |
             sudo apt update
             sudo docker-php-ext-install zip
-      
+
+      # Download and cache dependencies
       - restore_cache:
           keys:
             # "composer.lock" can be used if it is committed to the repo
@@ -29,58 +30,33 @@ jobs:
           name: "Install Dependencies"
           command: composer install -n --prefer-dist
 
- 
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
             - ./vendor
 
-      #prepare database
       - run:
-          name: "Create Environment file and generate app key"
+          name: "Create Environment file"
           command: |
             mv .env.testing .env
-            php artisan key:generate
-      
+
       - run:
-          name: "Create database and run migration"
+          name: "Generate App key"
+          command: php artisan key:generate
+
+      - run:
+          name: "Create DB and run migrate"
           command: |
             touch database/database.sqlite
             php artisan migrate --env=testing
 
-      # - run:
-      #     name: "Run database seeder"
-      #     command: |
-      #     php artisan db:seed --class=UserSeeder:
-      # Download and cache dependencies
-      
+      - run:
+          name: "Run Database Seeder"
+          command: |
+            php artisan db:seed --class=UserSeeder
 
-# run:
-# name: "Create database and run migration"
-# command: |
-# touch database/database.sqlite
-# php artisan migrate --env=testing
 
-# run:
-# name: "Run DB Seeder"
-# command: |
-# php artisan db:seed --class=UserSeeder
-  
-      #- run:
-       #   name: "Create DB and run migrate"
-        #  command: |
-         #   touch database/database.sqlite
-          #  php artisan migrate --env=testing
-
-      #- run:
-       #   name: "Run Database Seeder"
-        #  command: |
-         #   php artisan db:seed --class=UserSeeder
-
-     
       # run tests with phpunit
       - run:
           name: "Run Unit Tests"
           command: ./vendor/bin/phpunit tests/Unit
-
-
