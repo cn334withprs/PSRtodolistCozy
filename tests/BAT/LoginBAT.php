@@ -7,7 +7,7 @@ class LoginBAT {
     {
 
         $user = new User([
-            'email' => "psr@mail.com",
+            'email' => "usernotregister@mail.com",
             'password' => bcrypt("testpassword")
 
         ]);
