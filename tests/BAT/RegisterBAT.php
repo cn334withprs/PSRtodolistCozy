@@ -11,7 +11,7 @@ class RegisterBAT {
 
         ]);   
 
-        $this->assertEquals('Psrtodolist', $user->name);
+        $this->assertNotEquals('Psrtodolist', $user->name);
         $this->assertEquals('psr@mail.com', $user->email);
     }
 
