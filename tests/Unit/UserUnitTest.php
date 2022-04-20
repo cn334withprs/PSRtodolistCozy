@@ -54,7 +54,6 @@ class UserUnitTest extends TestCase
         $this->assertEquals('เทสอีเมล@mail.com', $user->email);
     }
 
-
 }
 
 

@@ -4,7 +4,15 @@ class RegisterBAT {
     //NULL username
     public function user_have_none_username()
     {
-        $this->assertTrue(true);
+        $user = new User([
+            'name' => NULL,
+            'email' => "psr@mail.com",
+            'password' => bcrypt("testpassword")
+
+        ]);   
+
+        $this->assertEquals('Psrtodolist', $user->name);
+        $this->assertEquals('psr@mail.com', $user->email);
     }
 
     //NULL email
