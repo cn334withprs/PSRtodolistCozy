@@ -19,13 +19,21 @@ class BasicFlowUAT {
         $this->assertTrue(true);
     }
 
-    //regis
+    //test register
     public function test_register_func()
     {
-        $this->assertTrue(true);
+        $user = new User([
+            'name' => "Psrtodolist",
+            'email' => "psr@mail.com",
+            'password' => bcrypt("testpassword")
+
+        ]);   
+
+        $this->assertEquals('Psrtodolist', $user->name);
+        $this->assertEquals('psr@mail.com', $user->email);
     }
 
-    //test log in func
+    //test login func
     public function test_login_func()
     {
         $this->assertTrue(true);
