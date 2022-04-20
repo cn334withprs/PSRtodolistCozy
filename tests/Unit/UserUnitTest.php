@@ -41,19 +41,6 @@ class UserUnitTest extends TestCase
         $this->assertEquals('เทสชื่อ', $user->name);
     }
 
-    public function testThaiPassword()
-    {
-
-        $user = new User([
-            'name' => "Psrtodolist",
-            'email' => "psr@mail.com",
-            'password' => bcrypt("เทสรหัส")
-
-        ]);
-
-        $this->assertEquals('เทสรหัส', $user->password);
-    }
-
     public function testThaiEmail()
     {
 
