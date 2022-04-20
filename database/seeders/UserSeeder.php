@@ -42,7 +42,7 @@ class UserSeeder extends Seeder
 
         //Task seeder
         Task::create([
-            'description' => "Psr1 Task",
+            'description' => "Psr1 Task", 
             'user_id' => 1
   
         ]);
