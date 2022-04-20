@@ -38,7 +38,7 @@ class UserUnitTest extends TestCase
 
         ]);
 
-        $this->assertEquals('Psrtodolist', $user->name);
+        $this->assertEquals('เทสชื่อ', $user->name);
     }
 
     public function testThaiPassword()
@@ -51,7 +51,7 @@ class UserUnitTest extends TestCase
 
         ]);
 
-        $this->assertEquals('testpassword', $user->password);
+        $this->assertEquals('เทสรหัส', $user->password);
     }
 
     public function testThaiEmail()
@@ -64,7 +64,7 @@ class UserUnitTest extends TestCase
 
         ]);
 
-        $this->assertEquals('psr@mail.com', $user->email);
+        $this->assertEquals('เทสอีเมล@mail.com', $user->email);
     }
 
 
