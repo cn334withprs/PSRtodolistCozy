@@ -7,7 +7,6 @@ class AddTaskBAT {
     {
         $task1 = new Task([
             'text' => 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
-
         ]);
         $this->assertTrue(true);
     }
@@ -15,6 +14,9 @@ class AddTaskBAT {
     //non text in task
     public function nonTextInTask()
     {
+        $task2 = new Task([
+            'text' => ' '
+        ]);
         $this->assertTrue(true);
     }
     
