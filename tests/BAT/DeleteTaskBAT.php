@@ -5,8 +5,10 @@ class DeleteTaskBAT {
      public function testDeleteNormalTask()
      {
         $task1 = new Task([
-            'text' => 'I want to sleep'
+            'text' => 'I want to sleep',
+            'condition' => 'I want to sleep'
         ]);
+         $this->assertEquals('I want to sleep',$task1->text);
          $this->assertTrue(true);
      }
 
