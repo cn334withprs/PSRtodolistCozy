@@ -1,11 +1,18 @@
 <?php
 
 class LoginBAT {
-    
+
     //user not register
     public function testUserNotRegister()
     {
-        $this->assertTrue(true);
+
+        $user = new User([
+            'email' => "psr@mail.com",
+            'password' => bcrypt("testpassword")
+
+        ]);
+
+        $this->assertNotEquals('psr@mail.com', $user->email);
     }
 
     //weird user (ex #%$%^$^%$&^$%^)
