@@ -5,19 +5,23 @@ class AddTaskBAT {
     //text in task more than 50 characters
     public function textMoreThan50Cha()
     {
-        $task1 = new Task([
-            'text' => 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+        $user = new User([
+            'addTask' => "111111111111111111111111111111111111111111111111111111111111",
+
         ]);
-        $this->assertTrue(true);
+
+        $this->assertNotEquals('add test task', $user->addTask);
     }
  
     //non text in task
     public function nonTextInTask()
     {
-        $task2 = new Task([
-            'text' => ' '
+        $user = new User([
+            'addTask' => "",
+
         ]);
-        $this->assertTrue(true);
+
+        $this->assertNotEquals('add test task', $user->addTask);
     }
     
 }
