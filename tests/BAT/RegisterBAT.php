@@ -1,6 +1,6 @@
 <?php
 
-class BasicFlowBAT {
+class RegisterBAT {
     //add task
     //edited task
     //deleted task
