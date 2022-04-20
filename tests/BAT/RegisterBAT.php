@@ -38,7 +38,14 @@ class RegisterBAT {
     //username have อักขระพิเศษ (ex #%$%^$^%$&^$%^)
     public function user_have_weird_username()
     {
-        $this->assertTrue(true);
+        $user = new User([
+            'name' => "#%$%^$^%$&^$%^",
+            'email' => "psr@mail.com",
+            'password' => bcrypt("testpassword")
+
+        ]);
+
+        $this->assertNotEquals('Psrtodolist', $user->name);
     }
 
     //email not real
@@ -47,10 +54,17 @@ class RegisterBAT {
         $this->assertTrue(true);
     }
 
-    //password do not exceed 20 char
-    public function user_do_not_exceed_20_char()
+    //name do not exceed 20 char
+    public function user_name_do_not_exceed_20_char()
     {
-        $this->assertTrue(true);
+        $user = new User([
+            'name' => "psr5556789103456794939339920cutecozy",
+            'email' => "psr@mail.com",
+            'password' => bcrypt("testpassword")
+
+        ]);
+
+        $this->assertNotEquals('Psrtodolist', $user->name);
     }
 
 
