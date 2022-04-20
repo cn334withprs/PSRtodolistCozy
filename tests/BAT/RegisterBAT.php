@@ -12,13 +12,19 @@ class RegisterBAT {
         ]);   
 
         $this->assertNotEquals('Psrtodolist', $user->name);
-        $this->assertEquals('psr@mail.com', $user->email);
     }
 
     //NULL email
     public function user_have_none_email()
     {
-        $this->assertTrue(true);
+        $user = new User([
+            'name' => "Psrtodolist",
+            'email' => NULL,
+            'password' => bcrypt("testpassword")
+
+        ]);   
+
+        $this->assertEquals('psr@mail.com', $user->email);
     }
 
     //NULL password
