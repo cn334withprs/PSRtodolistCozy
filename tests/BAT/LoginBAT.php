@@ -1,6 +1,7 @@
 <?php
 
 class LoginBAT {
+    
     //user not register
     public function testUserNotRegister()
     {
@@ -30,4 +31,5 @@ class LoginBAT {
     {
         $this->assertTrue(true);
     }
+
 }
