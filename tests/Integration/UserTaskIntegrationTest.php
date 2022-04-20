@@ -3,13 +3,13 @@
 class UserTaskIntegrationTest 
 {
     //User don't have test
-    public function user_have_no_test()
+    public function user_have_none_test()
     {
         $this->assertTrue(true);
     }
     
-    //User have multi test
-    public function user_have_multi_test()
+    //User have 1000 test
+    public function user_have_1000_test()
     {
         $this->assertTrue(true);
     }
@@ -25,9 +25,6 @@ class UserTaskIntegrationTest
     {
         $this->assertTrue(true);
     }
-
-    
-
 
 
 }
