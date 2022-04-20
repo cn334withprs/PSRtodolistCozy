@@ -16,20 +16,20 @@ class BasicFlowUAT {
     public function test_edit_task_todolist()
     {
         $task1 = new Task([
-            'text' => 'ABCDEabcd',
-            'condition' => 'ABCDEabcd'
+            'text' => 'Hello world',
+            'condition' => 'Hello world'
         ]);
-        $this->assertEquals('ABCDEabcd',$task1->text);
+        $this->assertEquals('Hello world',$task1->text);
     }
 
     //deleted task
     public function test_delete_task_todolist()
     {
         $task1 = new Task([
-            'text' => 'I want to sleep',
-            'condition' => 'I want to sleep'
+            'text' => 'Hello world',
+            'condition' => 'Hello world'
         ]);
-         $this->assertEquals('I want to sleep',$task1->text);
+         $this->assertEquals('Hello world',$task1->text);
          $this->assertTrue(true);
     }
 
